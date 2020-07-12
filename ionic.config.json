@@ -1,0 +1,7 @@
+{
+  "name": "ionic6-firebase-cleanarchitecture",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
