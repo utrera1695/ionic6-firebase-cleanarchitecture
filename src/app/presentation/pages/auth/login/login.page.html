@@ -1,0 +1,30 @@
+<ion-content class="ion-padding" [fullscreen]="true">
+  <div class="tittle">
+    <h3>Login</h3>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="login()">
+    <ion-item lines="full">
+      <ion-label position="floating">Correo electrónico</ion-label>
+      <ion-input type="text" placeholder="" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+
+    </ion-item>
+    <div class="forgot">
+      <a [routerLink]="['/recoverypassword']" class="small-text">olvide mi contraseña</a>
+    </div>
+    <div class="action">
+      <div class="action">
+
+        <ion-row>
+          <ion-col>
+            <ion-button type="submit" color="primary" expand="block">Ingresar</ion-button>
+            <a [routerLink]="['/singup']" class="small-text">Registrarme</a>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </form>
+</ion-content>

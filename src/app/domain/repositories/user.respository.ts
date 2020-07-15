@@ -4,4 +4,5 @@ import { Observable } from 'rxjs';
 export abstract class UserRepository {
   abstract loginUser(user: UserModel): Observable<UserModel>;
   abstract saveUser(user: UserModel): Observable<UserModel>;
+  abstract recoveryPassword(user: UserModel): Observable<any>;
 }

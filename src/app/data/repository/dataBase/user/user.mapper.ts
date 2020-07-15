@@ -2,7 +2,7 @@ import { UserEntity } from './user.entity';
 import { UserModel } from '../../../../domain/models/user.model';
 import { Mapper } from '../../../../domain/base/mapper';
 
-export class UserRepositoryMapper extends Mapper<UserEntity, UserModel> {
+export class UserMapper extends Mapper<UserEntity, UserModel> {
   mapFrom(param: UserEntity): UserModel {
     return {
       id: param.uid,

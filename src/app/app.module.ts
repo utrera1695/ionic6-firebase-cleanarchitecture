@@ -12,6 +12,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
+import { DataModule } from './data/data.module';
+import { AuthGuard } from './guards/auth.guard';
+import { LoginGuard } from './guards/login.guard';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -21,9 +24,12 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
+    DataModule,
   ],
   providers: [
     StatusBar,
+    AuthGuard,
+    LoginGuard,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
